@@ -32,7 +32,7 @@ public class InventoryApplication {
 
 		System.out.println("*********************************************************");
 
-		System.out.println("Search by brand: Nestle");
+		System.out.println("Search by brand: Nestle, Order by price asc, qty desc");
 		List<Filter> filters = List.of(new BrandFilter(List.of("Nestle")));
 		List<SortCriteria> sortCriteriaList = Arrays.asList(
 				new SortCriteria("price", true),
@@ -52,7 +52,7 @@ public class InventoryApplication {
 
 		System.out.println("*********************************************************");
 
-		System.out.println("Search by price range 70-100");
+		System.out.println("Search by price range 70-100, order by price desc, order by qty asc");
 		filters = List.of(new PriceFilter(70, 100));
 		List<SortCriteria> sortCriteriaList2 = Arrays.asList(
 				new SortCriteria("price", false),
@@ -63,7 +63,7 @@ public class InventoryApplication {
 
 		System.out.println("*********************************************************");
 
-		System.out.println("Search by category=Milk and price=70-100");
+		System.out.println("Search by category=Milk and price=70-100, order by brand desc, qty asc");
 		List<SortCriteria> sortCriteriaList3 = Arrays.asList(
 				new SortCriteria("brand", false),
 				new SortCriteria("itemqty", true)

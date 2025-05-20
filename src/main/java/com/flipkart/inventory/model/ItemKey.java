@@ -12,14 +12,14 @@ public class ItemKey {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o){
+    public boolean equals(Object obj) {
+        if (this == obj){
             return true;
         }
-        if (o == null || getClass() != o.getClass()){
+        if (obj == null || getClass() != obj.getClass()){
             return false;
         }
-        ItemKey key = (ItemKey) o;
+        ItemKey key = (ItemKey) obj;
         return this.brand.equals(key.brand) && this.category.equals(key.category);
     }
 
